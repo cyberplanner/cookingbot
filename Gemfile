@@ -8,4 +8,5 @@ group :development, :test do
   gem 'byebug'
 
   gem 'telegram-bot-ruby'
+  gem 'httparty'
 end

@@ -10,8 +10,15 @@ Telegram::Bot::Client.run(token) do |bot|
     case message.text
     when '/start'
      bot.api.send_message(chat_id: message.chat.id, text: "Hi, I'm the cookingbot, how can I help you?")
-   when '/recipes'
-      bot.api.send_message(chat_id: message.chat.id, text: "What are your ingredients?")
+    when '/recipes'
+      bot.api.send_message(chat_id: message.chat.id, text: "What's your first ingredients?")
+      ingredient_1 = gets.chomp
+
+      bot.api.send_message(chat_id: message.chat.id, text: "What's your second ingredients?")
+      ingredient_2 = gets.chomp
+      bot.api.send_message(chat_id: message.chat.id, text: "What's your third ingredients?")
+      ingredient_3 = gets.chomp
+
     end
   end
 end
